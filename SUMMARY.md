@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [installing](installing.md)
+* [環境準備與安裝](installing.md)
 
