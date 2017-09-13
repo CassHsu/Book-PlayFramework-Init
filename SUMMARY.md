@@ -3,4 +3,5 @@
 * [Introduction](README.md)
 * [環境準備與安裝](installing.md)
 * [整合開發環境IDE](IDE.md)
+* [Play專案結構](structure.md)
 
