@@ -5,4 +5,6 @@
 * [整合開發環境IDE](IDE.md)
 * [Play專案結構](structure.md)
 * [Hello World](helloworld.md)
+* [Actions Controllers Results](actions-controllers-results.md)
+* [JSON](json.md)
 
