@@ -7,4 +7,6 @@
 * [Hello World](helloworld.md)
 * [Actions Controllers Results](actions-controllers-results.md)
 * [JSON](json.md)
+* [資料庫](database.md)
+* [Ebean](ebean.md)
 
