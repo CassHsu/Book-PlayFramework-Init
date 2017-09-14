@@ -147,5 +147,54 @@ MariaDB [playdemo]> describe product;
 3 rows in set (0.01 sec)
 ```
 
+### 9. evolution目錄
+
+前往conf內發現多了default資料庫的evolutions目錄
+
+![](/assets/Ebean_evo_sql.png)
+
+1.sql 記載此db要升版跟降板的指令
+
+```
+# --- Created by Ebean DDL
+# To stop Ebean DDL generation, remove this comment and start using Evolutions
+
+# --- !Ups
+
+create table product (
+  id                            bigint auto_increment not null,
+  name                          varchar(255),
+  price                         integer not null,
+  constraint pk_product primary key (id)
+);
+
+
+# --- !Downs
+
+drop table if exists product;
+```
+
+若要使用Ebean ORM則預設必須由evolution來管理，在瀏覽器上按下剛才錯誤頁上的Apply this script now! 則會執行Evolution，將DB同步（會清除原有資料）。
+
+### 10. 移除前兩行註解
+
+由於每次的models變動都會自動產生1.sql，為了新增product欄位故須手動移除1.sql的前兩行
+
+```
+# --- Created by Ebean DDL
+# To stop Ebean DDL generation, remove this comment and start using Evolutions
+```
+
+註解的字義上也清楚表明。
+
+### 11. 修改Table Schema
+
+在Product內新增dectription
+
+```java
+@Column
+public String description;
+```
+
 
 
