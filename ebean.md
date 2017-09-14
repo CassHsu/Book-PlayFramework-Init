@@ -196,5 +196,30 @@ drop table if exists product;
 public String description;
 ```
 
+新增2.sql，並加入升版\(Ups\)與降板\(Downs\)設定
+
+```
+# --- !Ups
+ALTER TABLE product ADD description varchar(255);
+
+# --- !Downs
+ALTER TABLE product DROP description varchar(255);
+```
+
+查詢API，執行**Apply this script now!**![](/assets/Ebean_evo_2.png)檢視資料表描述，異動成功
+
+```
+MariaDB [playdemo]> describe product;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(255) | YES  |     | NULL    |                |
+| price       | int(11)      | NO   |     | NULL    |                |
+| description | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+```
+
 
 
