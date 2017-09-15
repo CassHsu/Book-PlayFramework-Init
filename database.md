@@ -6,7 +6,7 @@
 
 打開build.sbt，確認**libraryDependencies**內是否包含**javaJdbc**
 
-若無則可加入 libraryDependencies += javaJdbc
+若無則可加入 "mysql" % "mysql-connector-java" % "5.1.36"
 
 預設可能如下
 
@@ -19,7 +19,7 @@ libraryDependencies += guice
 ```
 libraryDependencies ++= Seq(
   guice,
-  javaJdbc
+  "mysql" % "mysql-connector-java" % "5.1.36"
 )
 ```
 
